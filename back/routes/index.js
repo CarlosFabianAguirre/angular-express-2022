@@ -31,6 +31,12 @@ router.post('/agregar-libro', async (req, res) => {
 
   res.status(200).send('ok');
 });
-
+/*busca  get buscar localhost:3000/api/buscar?termino=sdfasd
+levantamos aca en este backend lo que tipe el usuario el termino*/
+router.get("/buscar",async (req,res)=>{
+const{ termino } = req.query;
+const results = await api.findBookByTitle(termino); /* guardamos el resultado de lo que tipea el usuario en result para que lo muestre en el log */
+res.send(results);
+});
 
 module.exports = router;

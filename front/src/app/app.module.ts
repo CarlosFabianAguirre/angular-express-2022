@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 // Este módulo de HTTP Client nos permite hacer llamadas a un servidor
 // Llamadas a APIs
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { BuscarComponent } from './pages/buscar/buscar.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +25,14 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     NosotrosComponent,
     ContactoComponent,
     HomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    BuscarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
